@@ -4,3 +4,17 @@ dist/
 build/
 .firebase/
 *.log
+
+# System/Personal files (never commit these)
+.bash_profile
+.bashrc
+.zprofile
+.zshrc
+.profile
+.gitconfig
+.gitmodules
+.vscode/
+.idea/
+.claude/
+.mcp.json
+.ripgreprc
