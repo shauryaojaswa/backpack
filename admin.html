@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkpoint Admin – Kitchen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="admin-app">
+    <!-- Login screen -->
+    <div id="login-screen" class="screen active">
+      <div class="logo">📍 Checkpoint Admin</div>
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button id="login-btn">Login</button>
+      <p id="login-feedback" class="small-note"></p>
+    </div>
+    <!-- Orders dashboard -->
+    <div id="dashboard-screen" class="screen">
+      <div class="logo">📍 Kitchen Dashboard</div>
+      <button id="logout-btn">Logout</button>
+      <button id="upload-menu-btn">Upload Menu</button>
+      <div id="orders-list"></div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

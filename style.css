@@ -1,0 +1,277 @@
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #f8efe4 0%, #f4dfc3 100%);
+  color: #3a3226;
+}
+
+#app, #admin-app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+.welcome-card {
+  background: rgba(255, 253, 248, 0.95);
+  border: 1px solid #ead7bc;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.7rem;
+  color: #a04732;
+  text-align: center;
+  padding: 12px 0 8px;
+  letter-spacing: 1px;
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #6c5540;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+button {
+  background: linear-gradient(135deg, #a04732 0%, #c96d48 100%);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(160, 71, 50, 0.2);
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+button:disabled {
+  background: #c8bca8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+input {
+  padding: 12px 14px;
+  border: 1px solid #d8c4a7;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0 14px;
+  font-size: 1rem;
+  background: #fffdf8;
+}
+
+label {
+  font-weight: 700;
+  color: #6d4b2f;
+}
+
+.subtext {
+  color: #7a6044;
+  margin-bottom: 12px;
+}
+
+.sticker-row {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0 16px;
+  flex-wrap: wrap;
+}
+
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff5e1;
+  border: 1px solid #e8d4ae;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+#category-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.cat-tab {
+  white-space: nowrap;
+  border-radius: 999px;
+  background: #fff;
+  color: #6d4b2f;
+  border: 1px solid #e2c9a6;
+}
+
+.menu-item {
+  background: #fffdf8;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.item-info h3 {
+  margin: 0 0 6px;
+}
+
+.item-info p {
+  margin: 0 0 6px;
+  color: #6c5540;
+  font-size: 0.95rem;
+}
+
+.price {
+  font-weight: 700;
+  color: #a04732;
+}
+
+.add-to-cart {
+  background: #d4a373;
+  font-size: 1.2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+#cart-panel {
+  background: #fffdf8;
+  padding: 16px;
+  border-radius: 16px;
+  margin-top: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+#cart-list {
+  padding-left: 18px;
+}
+
+#cart-list li {
+  margin-bottom: 8px;
+}
+
+#order-summary {
+  background: #fffdf8;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-top: 12px;
+  border: 1px solid #ead7bc;
+}
+
+#status-message {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  min-height: 54px;
+}
+
+#status-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin: 20px 0;
+}
+
+#status-screen.celebrate {
+  animation: orderPulse 0.8s ease;
+}
+
+.status-step {
+  transition: all 0.2s ease;
+}
+
+@keyframes orderPulse {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.02); }
+  70% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.status-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #a04732 0%, #c96d48 100%);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.status-step {
+  flex: 1;
+  text-align: center;
+  padding: 10px 6px;
+  background: #eee3cc;
+  border-radius: 999px;
+  margin: 0 2px;
+  font-size: 0.8rem;
+  color: #6c5540;
+}
+
+.status-step.done {
+  background: #a04732;
+  color: white;
+}
+
+.status-step.active {
+  background: #d4a373;
+  color: white;
+  font-weight: bold;
+}
+
+.order-card {
+  background: #fffdf8;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.status-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.status-buttons button {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.small-note {
+  font-size: 0.95rem;
+  color: #6c5540;
+  margin: 8px 0 12px;
+}
+
+#order-summary {
+  background: #fffdf8;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-top: 12px;
+}
