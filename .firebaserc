@@ -1,8 +1,5 @@
 {
   "projects": {
-    "staging": "checkpoint-backpackers",
     "default": "checkpoint-backpackers"
-  },
-  "targets": {},
-  "etags": {}
+  }
 }

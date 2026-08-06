@@ -25,3 +25,4 @@ window.analytics = analytics;
 window.firebase = { app, auth, db, analytics };
 
 export { app, auth, db, analytics, serverTimestamp };
+

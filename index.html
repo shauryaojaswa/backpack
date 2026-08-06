@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkpoint Hostel – Food Order</title>
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">
-    <!-- Step 1: Name Input -->
     <div id="name-screen" class="screen active">
-      <div class="logo">📍 Checkpoint</div>
+      <div class="logo">CHECKP<span class="logo-o" aria-label="O"></span>INT<span class="logo-sub">Backpacker Hostel</span></div>
+      <div class="tagline">Good Food. Good People. Good Times.</div>
       <div class="welcome-card">
         <h2>Welcome, backpacker!</h2>
-        <p class="hero-text">Good Food. Good People. Good Times.</p>
-        <p class="subtext">Tell us your name and we’ll bring the hostel menu straight to your screen.</p>
+        <p class="hero-text">Tell us your name and we'll bring the hostel menu straight to your screen.</p>
         <div class="sticker-row" aria-label="Travel-inspired hostel stickers">
           <span class="sticker">🧳</span>
           <span class="sticker">🗺️</span>
@@ -24,27 +22,35 @@
         </div>
         <label for="customer-name">What should we call you?</label>
         <input type="text" id="customer-name" placeholder="Enter your name" autofocus>
-        <button id="start-order">Start Ordering</button>
+        <button id="start-order">Start Ordering →</button>
+        <div class="note-box">
+          <h4>★ A Few Things To Note ★</h4>
+          <p>★ Meals are prepared fresh daily.</p>
+          <p>★ No MSG • No artificial colours.</p>
+          <p class="note-thanks">Thank you for being part of the Checkpoint family! ♥</p>
+        </div>
       </div>
     </div>
 
-    <!-- Step 2: Menu & Cart -->
     <div id="menu-screen" class="screen">
-      <div class="logo">📍 Checkpoint</div>
+      <div class="logo small">CHECKP<span class="logo-o" aria-label="O"></span>INT</div>
+      <div class="menu-head">
+        <span class="brush">Menu</span>
+        <span class="menu-head-note">homemade ★ hygienic ★ made with love</span>
+      </div>
       <div id="category-tabs"></div>
       <div id="menu-items"></div>
       <div id="cart-panel">
         <h3>Your Cart <span id="cart-count">0</span></h3>
-        <p class="small-note">Fast hostel ordering</p>
+        <p class="small-note">Fast hostel ordering ★ pay cash at the counter</p>
         <ul id="cart-list"></ul>
-        <p>Total: ₹<span id="cart-total">0</span></p>
-        <button id="place-order">Place Order</button>
+        <p class="cart-total">Total: ₹<span id="cart-total">0</span></p>
+        <button id="place-order">Place Order ★</button>
       </div>
     </div>
 
-    <!-- Step 3: Order Status -->
     <div id="status-screen" class="screen">
-      <div class="logo">📍 Checkpoint</div>
+      <div class="logo small">CHECKP<span class="logo-o" aria-label="O"></span>INT</div>
       <h2>Hey <span id="status-name"></span>!</h2>
       <div id="status-bar">
         <div class="status-step" data-step="placed">Order Placed</div>
@@ -54,6 +60,14 @@
       </div>
       <p id="status-message"></p>
       <div id="order-summary"></div>
+    </div>
+
+    <div class="hostel-footer">
+      <div class="footer-line">
+        <span>★ Eat well. Stay happy.</span>
+        <span>★ Good food fuels great adventures.</span>
+      </div>
+      <div class="brush footer-brush">♥ Feed your body, fuel your journey.</div>
     </div>
   </div>
 
